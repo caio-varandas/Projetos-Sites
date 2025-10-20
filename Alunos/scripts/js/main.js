@@ -61,7 +61,7 @@ class AlunoController {
         const notaFinal = this.inputNotaFinal.value;
 
         if (!nome || !idade || cursoValor === "0" || !notaFinal) {
-            alert("Por favor, preencha todos os campos!");
+            alert("Por favor, preencha todos os campos");
             return;
         }
 
@@ -70,13 +70,13 @@ class AlunoController {
             this.alunoEdicao.idade = parseInt(idade);
             this.alunoEdicao.curso = cursoTexto;
             this.alunoEdicao.notaFinal = parseFloat(notaFinal);
-            alert("Aluno editado com sucesso!");
+            alert("Aluno editado com sucesso");
             this.alunoEdicao = null;
         } else {
             this.id++;
             const novoAluno = new Aluno(this.id, nome, idade, cursoTexto, notaFinal);
             this.alunos.push(novoAluno);
-            alert("Aluno cadastrado com sucesso!");
+            alert("Aluno cadastrado com sucesso");
         }
 
         this.limparFormulario();
@@ -156,7 +156,7 @@ class AlunoController {
     mostrarResultado(titulo, listaItens) {
         this.divResultado.innerHTML = `<strong>${titulo}</strong>`;
         if (listaItens.length === 0) {
-            this.divResultado.innerHTML += "<p>Nenhum dado para exibir.</p>";
+            this.divResultado.innerHTML += "<p>Nenhum dado para exibir</p>";
             return;
         }
         const ul = document.createElement('ul');
