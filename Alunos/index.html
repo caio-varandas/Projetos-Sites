@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Alunos</title>
+</head>
+<body>
+    <h1>Informações do Aluno</h1>
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" placeholder="Nome do aluno">
+    <br><br>
+
+    <label for="idade">Idade: </label>
+    <input type="number" id="idade" name="idade" min='0' placeholder="Idade do aluno">
+    <br><br>
+
+    <label for="cursos">Curso: </label>
+    <select name="curso" id="cursos">
+        <option value="0"></option>
+        <option value="1">JavaScript</option>
+        <option value="2">Python</option>
+        <option value="3">Java</option>
+    </select>
+    <br><br>
+
+    <label for="notafinal">Nota Final: </label>
+    <input type="number" id="notafinal" name="notafinal" min='0' max='10' placeholder="Nota final do aluno">
+    <br><br>
+    <button id="btnEnviar">Cadastrar</button>
+    <br><br>
+
+
+    <h2>Lista de Alunos</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th bgcolor="gray" width="130">Nome</th>
+                <th bgcolor="gray" width="130">Idade</th>
+                <th bgcolor="gray" width="130">Curso</th>
+                <th bgcolor="gray" width="130">Nota Final</th>
+                <th bgcolor="gray" width="130">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <h2>Relatórios</h2>
+    <button id="btnAprovados">Listar Aprovados</button>
+    <button id="btnMediaNotas">Média das Notas</button>
+    <button id="btnMediaIdades">Média das Idades</button>
+    <button id="btnOrdemAlfabetica">Listar por Nome</button>
+    <button id="btnTotalPorCurso">Total por Curso</button>
+    
+    <div id="relatoriosResultado" style="margin-top: 15px; background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+        <p>Os resultados dos relatórios aparecerão aqui.</p>
+    </div>
+    <script src="scripts/js/main.js"></script>
+</body>
+</html>
