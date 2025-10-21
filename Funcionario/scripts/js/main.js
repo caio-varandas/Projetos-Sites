@@ -61,7 +61,7 @@ class FuncionarioController {
         const salario = this.inputSalario.value;
 
         if (!nome || !idade || !cargo || !salario) {
-            alert("Por favor, preencha todos os campos!");
+            alert("Por favor, preencha todos os campos");
             return;
         }
 
