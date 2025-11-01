@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Pastorais</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Cadastro de Pastorais</h1>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" id="nome" class="form-control" placeholder="Nome da pessoa">
+          </div>
+
+          <div class="col-md-2">
+            <label for="idade" class="form-label">Idade</label>
+            <input type="number" id="idade" class="form-control" min="0" placeholder="Idade">
+          </div>
+
+          <div class="col-md-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" id="telefone" class="form-control" placeholder="Telefone">
+          </div>
+
+          <div class="col-md-3">
+            <label for="pastorais" class="form-label">Pastoral</label>
+            <select id="pastorais" class="form-select">
+              <option value="0"></option>
+              <option value="1">Pastoral da Catequese</option>
+              <option value="2">Pascom</option>
+              <option value="3">Pastoral dos Acólitos</option>
+              <option value="4">Pastoral da Liturgia</option>
+              <option value="5">Pastoral dos Jovens</option>
+              <option value="6">Pastoral dos Idosos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4 text-center">
+          <button id="btnEnviar" class="btn btn-primary px-5">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cardsContainer" class="row"></div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
